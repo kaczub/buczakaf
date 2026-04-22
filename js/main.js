@@ -43,14 +43,14 @@ const translations = {
       en: 'In photography I shoot pretty much everything, but my goal is to focus on concerts because that feels like my main field. I have already worked with the band <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, and I also work as a photographer for the <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1st Jaroslaw Scout Troop "Poscig"</a>.',
     },
     gearHeader: { pl: "Moj sprzet", en: "My gear" },
+    gearCamera: {
+      pl: "Nikon D3100 + Nikkor 18-105mm",
+      en: "Nikon D3100 + Nikkor 18-105mm",
+    },
     gearMac: { pl: "Mac Mini M4", en: "Mac Mini M4" },
     gearThinkPad: {
       pl: "ThinkPad T490 (Arch Linux + Windows dual boot)",
       en: "ThinkPad T490 (Arch Linux + Windows dual boot)",
-    },
-    gearCamera: {
-      pl: "Nikon D3100 + Nikkor 18-105mm",
-      en: "Nikon D3100 + Nikkor 18-105mm",
     },
   },
   scouting: {
