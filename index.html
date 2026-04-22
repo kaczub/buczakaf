@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>buczakaf — Fotograf</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <!-- ─── Navbar ─────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a class="nav-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
+      <a class="nav-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+    </div>
+    <a class="nav-logo" href="index.html">buczakaf</a>
+    <div class="nav-right">
+      <div class="lang-switch" aria-label="Language switcher">
+        <button class="lang-btn" type="button" data-lang="pl">PL</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
+      <a class="nav-icon" href="https://instagram.com/buczakaf" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ────────────────────────────────────────────────── -->
+  <section class="hero">
+    <h1 data-i18n="heroTitle">Cześć, jestem Kamil</h1>
+    <p data-i18n="heroSubtitle">Fotograf</p>
+  </section>
+
+  <!-- ─── Categories ──────────────────────────────────────────── -->
+  <main class="categories">
+
+    <!-- Harcerstwo -->
+    <a class="cat-feature" href="harcerstwo.html">
+      <div class="cat-feature-media">
+        <img src="images/harcerstwo/DSC_0253.JPG" alt="Harcerstwo" width="4608" height="3072" fetchpriority="high"
+             style="object-position: center center;"
+             onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>DSC_0253.JPG</div>'">
+      </div>
+      <div class="cat-feature-panel">
+        <h2 data-i18n="catScouting">Harcerstwo</h2>
+      </div>
+    </a>
+
+    <!-- Koncerty -->
+    <a class="cat-feature cat-feature-reverse" href="koncerty.html">
+      <div class="cat-feature-panel">
+        <h2 data-i18n="catConcerts">Koncerty</h2>
+      </div>
+      <div class="cat-feature-media">
+        <img src="images/koncerty/DSC_0014-Poprawione-Szum-2.jpg" alt="Koncerty" width="4566" height="3044"
+             style="object-position: center center;"
+             onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>DSC_0014-Poprawione-Szum-2.jpg</div>'">
+      </div>
+    </a>
+
+    <!-- Dodaj kolejne kategorie kopiując cały blok .cat-feature -->
+
+  </main>
+
+  <footer class="site-footer" data-i18n="footerMade">Made with love in Jaroslaw</footer>
+
+  <!-- ─── Back to top ─────────────────────────────────────────── -->
+  <button class="back-top" aria-label="Wróć na górę">
+    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
