@@ -130,8 +130,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .cat-feature {
   display: grid;
   grid-template-columns: minmax(0, 72fr) minmax(190px, 28fr);
-  min-height: clamp(210px, 23vw, 300px);
+  height: clamp(210px, 23vw, 300px);
   background: transparent;
+  align-items: stretch;
   animation: fadeUp 0.8s ease both;
   transition: transform 0.25s ease;
 }
@@ -146,6 +147,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .cat-feature-media {
   background: var(--bg-card);
+  min-height: 0;
   overflow: hidden;
 }
 
@@ -154,6 +156,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 0;
   text-align: center;
   padding: 0.75rem;
   transition: background 0.25s ease;
@@ -244,18 +247,24 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 2rem 4rem;
-  columns: 3;
-  column-gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  align-items: start;
+}
+
+.gallery-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .gallery-grid .photo {
-  break-inside: avoid;
-  margin-bottom: 6px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
   background: #202020;
-  contain: layout paint;
+  contain: paint;
 }
 
 .gallery-grid .photo img {
@@ -285,12 +294,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .about-copy h3 {
   font-family: var(--font-main);
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-}
-
-.about-copy h3 {
-  font-size: 1.1rem;
   margin-bottom: 0.85rem;
 }
 
@@ -408,7 +414,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .cat-feature,
   .cat-feature-reverse {
     grid-template-columns: 1fr;
-    min-height: unset;
+    height: auto;
   }
 
   .cat-feature-reverse .cat-feature-media {
@@ -437,10 +443,10 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     padding: 1.4rem 1.25rem;
   }
 
-  .gallery-grid { columns: 2; }
+  .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 480px) {
-  .gallery-grid { columns: 1; }
+  .gallery-grid { grid-template-columns: 1fr; }
   .hero { padding: 3rem 1.5rem 2.5rem; }
 }
