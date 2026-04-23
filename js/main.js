@@ -41,8 +41,8 @@ const translations = {
     },
     aboutHeader: { pl: "O mnie", en: "About" },
     aboutP1: {
-      pl: "Interesuję się fotografią, informatyką i muzyką. W wolnym czasie gram na gitarze i uczę się programowania – ta strona jest obecnie napisana głównie przez AI, ale sukcesywnie zastępuję ten kod własnym.",
-      en: "I'm interested in photography, computer science, and music. In my free time I play guitar and learn programming - this website is currently written mostly by AI, but I'm gradually replacing that code with my own.",
+      pl: "Interesuję się fotografią, informatyką i muzyką. Zdjęcia robię od kwietnia 2024 roku. W wolnym czasie gram na gitarze i uczę się programowania, ta strona jest obecnie napisana głównie przez AI, ale sukcesywnie zastępuję ten kod własnym.",
+      en: "I'm interested in photography, computer science, and music. I've been taking photos since April 2024. In my free time I play guitar and learn programming, this website is currently written mostly by AI, but I'm gradually replacing that code with my own.",
     },
     aboutP2: {
       pl: 'W fotografii robię w zasadzie wszystko, ale docelowo chcę skupić się na koncertach, bo czuję, że to moja główna dziedzina. Mam już za sobą współpracę z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, działam też jako zastępowy i fotograf w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a>.',
