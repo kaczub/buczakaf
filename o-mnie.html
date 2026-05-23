@@ -27,31 +27,78 @@
           <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
         </svg>
       </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Otwórz menu"
+        data-i18n-aria-label="menuOpenLabel"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <a class="mobile-menu-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
+      <a class="mobile-menu-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <div class="lang-switch" aria-label="Language switcher" data-i18n-aria-label="langSwitcherLabel">
+        <button class="lang-btn" type="button" data-lang="pl">PL</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
+      <a class="nav-icon mobile-nav-icon" href="https://instagram.com/buczakaf" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </div>
 
   <header class="gallery-header">
     <h1 data-i18n="aboutHeader">O mnie</h1>
   </header>
 
   <main class="about-layout">
-    <article class="about-copy">
-      <p data-i18n="aboutP1">Interesuję się fotografią, informatyką i muzyką. Zdjęcia robię od kwietnia 2024 roku. W wolnym czasie gram na gitarze i uczę się programowania, ta strona jest obecnie napisana głównie przez AI, ale sukcesywnie zastępuję ten kod własnym.</p>
+    <section class="about-shell">
+      <p class="about-kicker" data-i18n="aboutKicker">Fotografia koncertowa, harcerska i reportażowa</p>
 
-      <p data-i18n-html="aboutP2">W fotografii robię w zasadzie wszystko, ale docelowo chcę skupić się na koncertach, bo czuję, że to moja główna dziedzina. Mam już za sobą współpracę z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, działam też jako zastępowy i fotograf w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a>.</p>
+      <div class="about-grid">
+        <article class="about-copy">
+          <p data-i18n="aboutP1">Interesuję się fotografią, informatyką i muzyką. Zdjęcia robię od kwietnia 2024 roku. W wolnym czasie gram na gitarze i uczę się programowania. Ta strona jest na razie zrobiona głównie przez AI, ale mam zamiar stopniowo pisać coraz więcej własnego kodu.</p>
 
-      <section class="about-gear">
-        <h3 data-i18n="gearHeader">Mój sprzęt</h3>
-        <ul>
-          <li data-i18n="gearCamera">Nikon D3100 + Nikkor 18-105mm</li>
-          <li data-i18n="gearMac">Mac Mini M4</li>
-          <li data-i18n="gearThinkPad">ThinkPad T490 (Arch Linux + Windows dual boot)</li>
-        </ul>
-      </section>
-    </article>
+          <p data-i18n-html="aboutP2">Fotografuję różne tematy, ale najmocniej ciągnie mnie do koncertów, bo właśnie tam najlepiej czuję energię kadru i emocje chwili. Mam już za sobą współpracę z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, działam też jako zastępowy i fotograf w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a>.</p>
+        </article>
+
+        <aside class="about-side">
+          <section class="about-card about-gear">
+            <h3 data-i18n="gearHeader">Mój sprzęt</h3>
+            <ul>
+              <li data-i18n="gearCamera">Sony A6400 + SIGMA 18-50mm F2.8</li>
+              <li data-i18n="gearMac">Mac Mini M4</li>
+              <li data-i18n="gearThinkPad">ThinkPad T490</li>
+            </ul>
+          </section>
+
+          <section class="about-card">
+            <h3 data-i18n="workflowHeader">Praca i edycja</h3>
+            <ul>
+              <li data-i18n="workflowLightroom">Lightroom Classic</li>
+              <li data-i18n="workflowPhotoshop">Photoshop</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer" data-i18n="footerMade">Made with love in Jaroslaw</footer>
+  <footer class="site-footer" data-i18n="footerMade">Made with love in Jarosław</footer>
 
   <button class="back-top" aria-label="Wróć na górę" data-i18n-aria-label="backToTopLabel">
     <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>

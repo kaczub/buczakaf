@@ -28,13 +28,48 @@
           <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
         </svg>
       </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Otwórz menu"
+        data-i18n-aria-label="menuOpenLabel"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <a class="mobile-menu-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
+      <a class="mobile-menu-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <div class="lang-switch" aria-label="Language switcher" data-i18n-aria-label="langSwitcherLabel">
+        <button class="lang-btn" type="button" data-lang="pl">PL</button>
+        <button class="lang-btn" type="button" data-lang="en">EN</button>
+      </div>
+      <a class="nav-icon mobile-nav-icon" href="https://instagram.com/buczakaf" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </div>
 
   <!-- ─── Hero ────────────────────────────────────────────────── -->
   <section class="hero">
-    <h1 data-i18n="heroTitle">Cześć, jestem Kamil</h1>
-    <p data-i18n="heroSubtitle">Fotograf</p>
+    <div class="hero-stage hero-stage-home">
+      <div class="hero-copy hero-copy-home">
+        <p class="hero-eyebrow" data-i18n="heroSubtitle">Fotograf</p>
+        <h1 data-i18n="heroTitle">Cześć, jestem Kamil</h1>
+      </div>
+    </div>
   </section>
 
   <!-- ─── Categories ──────────────────────────────────────────── -->
@@ -53,22 +88,20 @@
     </a>
 
     <!-- Koncerty -->
-    <a class="cat-feature cat-feature-reverse" href="koncerty.html">
-      <div class="cat-feature-panel">
-        <h2 data-i18n="catConcerts">Koncerty</h2>
-      </div>
+    <a class="cat-feature" href="koncerty.html">
       <div class="cat-feature-media">
         <img src="images/koncerty/DSC_0014-Poprawione-Szum-2.jpg" alt="Koncerty" width="4566" height="3044"
              style="object-position: center center;"
              data-fallback-label="DSC_0014-Poprawione-Szum-2.jpg">
       </div>
+      <div class="cat-feature-panel">
+        <h2 data-i18n="catConcerts">Koncerty</h2>
+      </div>
     </a>
-
-    <!-- Dodaj kolejne kategorie kopiując cały blok .cat-feature -->
 
   </main>
 
-  <footer class="site-footer" data-i18n="footerMade">Made with love in Jaroslaw</footer>
+  <footer class="site-footer" data-i18n="footerMade">Made with love in Jarosław</footer>
 
   <!-- ─── Back to top ─────────────────────────────────────────── -->
   <button class="back-top" aria-label="Wróć na górę" data-i18n-aria-label="backToTopLabel">

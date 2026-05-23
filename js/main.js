@@ -16,20 +16,23 @@ const translations = {
     },
     navPortfolio: { pl: "Portfolio", en: "Portfolio" },
     navAbout: { pl: "O mnie", en: "About" },
-    footerMade: { pl: "Made with love in Jaroslaw", en: "Made with love in Jaroslaw" },
+    photographerLabel: { pl: "Fotograf", en: "Photographer" },
+    footerMade: { pl: "Made with love in Jarosław", en: "Made with love in Jarosław" },
     langSwitcherLabel: { pl: "Przełącznik języka", en: "Language switcher" },
+    menuOpenLabel: { pl: "Otwórz menu", en: "Open menu" },
+    menuCloseLabel: { pl: "Zamknij menu", en: "Close menu" },
     backToTopLabel: { pl: "Wróć na górę", en: "Back to top" },
-    lightboxImageAlt: { pl: "Powiekszone zdjecie", en: "Enlarged image" },
+    lightboxImageAlt: { pl: "Powiększone zdjęcie", en: "Enlarged image" },
     lightboxCloseLabel: { pl: "Zamknij", en: "Close" },
     lightboxPrevLabel: { pl: "Poprzednie", en: "Previous" },
-    lightboxNextLabel: { pl: "Nastepne", en: "Next" },
+    lightboxNextLabel: { pl: "Następne", en: "Next" },
   },
   home: {
     metaTitle: {
       pl: "buczakaf — Fotograf",
       en: "buczakaf — Photographer",
     },
-    heroTitle: { pl: "Czesc, jestem Kamil", en: "Hi, I'm Kamil" },
+    heroTitle: { pl: "Cześć, jestem Kamil", en: "Hi, I'm Kamil" },
     heroSubtitle: { pl: "Fotograf", en: "Photographer" },
     catScouting: { pl: "Harcerstwo", en: "Scouting" },
     catConcerts: { pl: "Koncerty", en: "Concerts" },
@@ -40,24 +43,31 @@ const translations = {
       en: "About — buczakaf",
     },
     aboutHeader: { pl: "O mnie", en: "About" },
+    aboutKicker: {
+      pl: "Fotografia koncertowa, harcerska i reportażowa",
+      en: "Concert, scouting, and documentary photography",
+    },
     aboutP1: {
-      pl: "Interesuję się fotografią, informatyką i muzyką. Zdjęcia robię od kwietnia 2024 roku. W wolnym czasie gram na gitarze i uczę się programowania, ta strona jest obecnie napisana głównie przez AI, ale sukcesywnie zastępuję ten kod własnym.",
-      en: "I'm interested in photography, computer science, and music. I've been taking photos since April 2024. In my free time I play guitar and learn programming, this website is currently written mostly by AI, but I'm gradually replacing that code with my own.",
+      pl: "Interesuję się fotografią, informatyką i muzyką. Zdjęcia robię od kwietnia 2024 roku. W wolnym czasie gram na gitarze i uczę się programowania. Ta strona jest na razie zrobiona głównie przez AI, ale mam zamiar stopniowo pisać coraz więcej własnego kodu.",
+      en: "I'm interested in photography, computer science, and music. I've been taking photos since April 2024. In my free time I play guitar and learn programming. This website is currently built mostly with AI, but I plan to gradually write more and more of the code myself.",
     },
     aboutP2: {
-      pl: 'W fotografii robię w zasadzie wszystko, ale docelowo chcę skupić się na koncertach, bo czuję, że to moja główna dziedzina. Mam już za sobą współpracę z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, działam też jako zastępowy i fotograf w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a>.',
-      en: 'In photography I shoot a bit of everything, but ultimately I want to focus on concerts, because I feel that is my main field. I have already worked with the band <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, and I also serve as a patrol leader and photographer in the <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1st Jaroslaw Scout Troop “Pościg”</a>.',
+      pl: 'Fotografuję różne tematy, ale najmocniej ciągnie mnie do koncertów, bo właśnie tam najlepiej czuję energię kadru i emocje chwili. Mam już za sobą współpracę z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, działam też jako zastępowy i fotograf w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a>.',
+      en: 'I photograph different subjects, but I feel most drawn to concerts, because that is where I connect most with the energy of the frame and the emotion of the moment. I have already worked with the band <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, and I also serve as a patrol leader and photographer in the <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1st Jaroslaw Scout Troop “Pościg”</a>.',
     },
-    gearHeader: { pl: "Moj sprzet", en: "My gear" },
+    gearHeader: { pl: "Mój sprzęt", en: "My gear" },
     gearCamera: {
-      pl: "Nikon D3100 + Nikkor 18-105mm",
-      en: "Nikon D3100 + Nikkor 18-105mm",
+      pl: "Sony A6400 + SIGMA 18-50mm F2.8",
+      en: "Sony A6400 + SIGMA 18-50mm F2.8",
     },
     gearMac: { pl: "Mac Mini M4", en: "Mac Mini M4" },
     gearThinkPad: {
-      pl: "ThinkPad T490 (Arch Linux + Windows dual boot)",
-      en: "ThinkPad T490 (Arch Linux + Windows dual boot)",
+      pl: "ThinkPad T490",
+      en: "ThinkPad T490",
     },
+    workflowHeader: { pl: "Praca i edycja", en: "Work and editing" },
+    workflowLightroom: { pl: "Lightroom Classic", en: "Lightroom Classic" },
+    workflowPhotoshop: { pl: "Photoshop", en: "Photoshop" },
   },
   scouting: {
     metaTitle: {
@@ -119,11 +129,80 @@ function applyLanguage(lang) {
     button.classList.toggle("active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  if (typeof updateNavToggleLabel === "function") {
+    updateNavToggleLabel();
+  }
 }
 
 document.querySelectorAll(".lang-btn").forEach((button) => {
   button.addEventListener("click", () => applyLanguage(button.dataset.lang));
 });
+
+const navToggle = document.querySelector(".nav-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+function updateNavToggleLabel() {
+  if (!navToggle) return;
+
+  const isOpen = mobileMenu?.classList.contains("open");
+  const labelKey = isOpen ? "menuCloseLabel" : "menuOpenLabel";
+  const label = getTranslation(labelKey, document.documentElement.lang);
+
+  if (label) {
+    navToggle.setAttribute("aria-label", label);
+  }
+
+  navToggle.setAttribute("aria-expanded", String(Boolean(isOpen)));
+}
+
+function closeMobileMenu() {
+  if (!mobileMenu) return;
+
+  mobileMenu.classList.remove("open");
+  document.body.classList.remove("menu-open");
+  updateNavToggleLabel();
+}
+
+if (navToggle && mobileMenu) {
+  navToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const willOpen = !mobileMenu.classList.contains("open");
+
+    mobileMenu.classList.toggle("open", willOpen);
+    document.body.classList.toggle("menu-open", willOpen);
+    updateNavToggleLabel();
+  });
+
+  mobileMenu.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!mobileMenu.classList.contains("open")) return;
+    if (navToggle.contains(event.target)) return;
+    if (mobileMenu.contains(event.target)) return;
+    closeMobileMenu();
+  });
+
+  mobileMenu.querySelectorAll("a[href]").forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      closeMobileMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  });
+}
 
 applyLanguage(preferredLang);
 
@@ -135,6 +214,206 @@ document.querySelectorAll("[data-fallback-label]").forEach((img) => {
     }
   }, { once: true });
 });
+
+function normalizeGalleryAlts() {
+  const labelByPage = {
+    concerts: "Koncerty",
+    scouting: "Harcerstwo",
+  };
+  const baseLabel = labelByPage[pageKey];
+  if (!baseLabel) return;
+
+  [...document.querySelectorAll(".gallery-grid .photo img")].forEach((img, index) => {
+    img.alt = `${baseLabel} ${index + 1}`;
+  });
+}
+
+function clampChannel(value) {
+  return Math.max(0, Math.min(255, Math.round(value)));
+}
+
+function rgbaString(rgb, alpha) {
+  return `rgba(${clampChannel(rgb.r)}, ${clampChannel(rgb.g)}, ${clampChannel(rgb.b)}, ${alpha})`;
+}
+
+function scaleColor(rgb, factor) {
+  return {
+    r: clampChannel(rgb.r * factor),
+    g: clampChannel(rgb.g * factor),
+    b: clampChannel(rgb.b * factor),
+  };
+}
+
+function mixColor(rgb, target, amount) {
+  return {
+    r: rgb.r + (target.r - rgb.r) * amount,
+    g: rgb.g + (target.g - rgb.g) * amount,
+    b: rgb.b + (target.b - rgb.b) * amount,
+  };
+}
+
+function readImageColor(img) {
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d", { willReadFrequently: true });
+  if (!context) return null;
+
+  const sampleWidth = 28;
+  const sampleHeight = 28;
+  canvas.width = sampleWidth;
+  canvas.height = sampleHeight;
+
+  try {
+    context.drawImage(img, 0, 0, sampleWidth, sampleHeight);
+    const { data } = context.getImageData(0, 0, sampleWidth, sampleHeight);
+
+    let r = 0;
+    let g = 0;
+    let b = 0;
+    let weight = 0;
+
+    for (let i = 0; i < data.length; i += 4) {
+      const alpha = data[i + 3] / 255;
+      if (alpha < 0.1) continue;
+
+      const pixelWeight = ((data[i] + data[i + 1] + data[i + 2]) / 3) / 255 + 0.35;
+      r += data[i] * pixelWeight;
+      g += data[i + 1] * pixelWeight;
+      b += data[i + 2] * pixelWeight;
+      weight += pixelWeight;
+    }
+
+    if (!weight) return null;
+
+    return {
+      r: r / weight,
+      g: g / weight,
+      b: b / weight,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function applyPageGlow(primary, secondary = primary, tertiary = primary) {
+  const rootStyle = document.documentElement.style;
+  const glowOne = scaleColor(mixColor(primary, { r: 255, g: 255, b: 255 }, 0.08), 1.08);
+  const glowTwo = scaleColor(mixColor(secondary, { r: 120, g: 140, b: 255 }, 0.14), 1.06);
+  const glowThree = scaleColor(mixColor(tertiary, { r: 255, g: 90, b: 120 }, 0.1), 1.04);
+
+  rootStyle.setProperty("--glow-1", rgbaString(glowOne, 0.34));
+  rootStyle.setProperty("--glow-2", rgbaString(glowTwo, 0.26));
+  rootStyle.setProperty("--glow-3", rgbaString(glowThree, 0.22));
+}
+
+function applyPhotoAccent(frame, color) {
+  if (!frame) return;
+
+  const border = mixColor(scaleColor(color, 1.12), { r: 255, g: 255, b: 255 }, 0.08);
+  const halo = mixColor(scaleColor(color, 1.08), { r: 255, g: 255, b: 255 }, 0.04);
+
+  frame.style.setProperty("--photo-accent", rgbaString(border, 0.62));
+  frame.style.setProperty("--photo-accent-soft", rgbaString(color, 0.26));
+  frame.style.setProperty("--photo-accent-glow", rgbaString(halo, 0.2));
+}
+
+function whenImageReady(img, callback) {
+  if (img.complete && img.naturalWidth > 0) {
+    callback();
+    return;
+  }
+  img.addEventListener("load", callback, { once: true });
+}
+
+function setupDynamicGlow() {
+  const cards = [...document.querySelectorAll(".cat-feature")];
+  const galleryImages = [...document.querySelectorAll(".gallery-grid .photo img")];
+
+  if (cards.length) {
+    let defaultColor = null;
+
+    cards.forEach((card, index) => {
+      const img = card.querySelector("img");
+      if (!img) return;
+
+      whenImageReady(img, () => {
+        const color = readImageColor(img);
+        if (!color) return;
+
+        card.dataset.glow = JSON.stringify(color);
+        card.style.setProperty("--tile-glow", rgbaString(color, 0.24));
+
+        if (!defaultColor || index === 0) {
+          defaultColor = color;
+          applyPageGlow(color);
+        }
+      });
+
+      const activateCardGlow = () => {
+        if (!card.dataset.glow) return;
+        const color = JSON.parse(card.dataset.glow);
+        const accent = mixColor(color, { r: 255, g: 255, b: 255 }, 0.04);
+        applyPageGlow(color, accent, mixColor(color, { r: 255, g: 90, b: 120 }, 0.1));
+      };
+
+      card.addEventListener("pointerenter", activateCardGlow);
+      card.addEventListener("focusin", activateCardGlow);
+      card.addEventListener("pointerleave", () => {
+        if (defaultColor) applyPageGlow(defaultColor);
+      });
+      card.addEventListener("focusout", () => {
+        if (defaultColor) applyPageGlow(defaultColor);
+      });
+    });
+  }
+
+  if (!cards.length && galleryImages.length) {
+    const defaultPalette = new Array(3).fill(null);
+
+    const restoreDefaultGlow = () => {
+      const [primary, secondary, tertiary] = defaultPalette;
+      if (!primary) return;
+
+      applyPageGlow(
+        primary,
+        secondary || primary,
+        tertiary || primary,
+      );
+    };
+
+    galleryImages.forEach((img, index) => {
+      whenImageReady(img, () => {
+        const color = readImageColor(img);
+        if (!color) return;
+
+        const frame = img.closest(".photo");
+        applyPhotoAccent(frame, color);
+
+        if (index < 3) {
+          defaultPalette[index] = color;
+          restoreDefaultGlow();
+        }
+
+        if (!frame) return;
+
+        const activateGlow = () => {
+          applyPageGlow(
+            color,
+            mixColor(color, { r: 90, g: 140, b: 255 }, 0.18),
+            mixColor(color, { r: 255, g: 120, b: 90 }, 0.14),
+          );
+        };
+
+        frame.addEventListener("pointerenter", activateGlow);
+        frame.addEventListener("focusin", activateGlow);
+        frame.addEventListener("pointerleave", restoreDefaultGlow);
+        frame.addEventListener("focusout", restoreDefaultGlow);
+      });
+    });
+  }
+}
+
+normalizeGalleryAlts();
+setupDynamicGlow();
 
 /* ─── Lightbox (gallery pages) ────────────────────────────── */
 const lightbox  = document.querySelector('.lightbox');
@@ -160,13 +439,14 @@ if (lightbox) {
   });
 
   function getGalleryColumnCount() {
-    if (window.matchMedia('(max-width: 480px)').matches) return 1;
-    if (window.matchMedia('(max-width: 768px)').matches) return 2;
-    return 3;
+    if (window.matchMedia('(max-width: 640px)').matches) return 1;
+    return 2;
   }
 
   function layoutGalleryColumns() {
     if (!galleryGrid) return;
+
+    galleryGrid.style.setProperty('--gallery-columns', String(currentGalleryColumnCount));
 
     const items = [...galleryGrid.querySelectorAll('.photo')];
     if (!items.length) return;
@@ -252,19 +532,23 @@ if (lightbox) {
 }
 
 /* ─── Staggered photo reveal on gallery pages ─────────────── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
+const revealItems = [...document.querySelectorAll('.gallery-grid .photo')];
+
+if (revealItems.length) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'none';
       observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08 });
+    });
+  }, { threshold: 0.02, rootMargin: '0px 0px -8% 0px' });
 
-document.querySelectorAll('.gallery-grid .photo').forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'none';
-  el.style.transition = `opacity 0.5s ease ${i * 0.04}s`;
-  observer.observe(el);
-});
+  revealItems.forEach((el, i) => {
+    const delay = Math.min(i * 0.014, 0.14);
+    el.style.opacity = '0';
+    el.style.transform = 'translate3d(0, 10px, 0)';
+    el.style.transition = `opacity 0.28s ease ${delay}s, transform 0.34s ease ${delay}s`;
+    observer.observe(el);
+  });
+}
