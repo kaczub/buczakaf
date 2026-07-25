@@ -88,6 +88,7 @@ const translations = {
     eventNameDniJaroslawia2026: { pl: "Dni Jarosławia 2026", en: "Dni Jarosławia 2026" },
     eventNameDniJaroslawia2025: { pl: "Dni Jarosławia 2025", en: "Dni Jarosławia 2025" },
     eventNameSesja: { pl: "Sesje — Medeis 2025", en: "Sessions — Medeis 2025" },
+    eventNameSesja2026: { pl: "Sesje — Medeis 2026", en: "Sessions — Medeis 2026" },
     eventNameSpiewogranie: { pl: "Śpiewogranie 2026", en: "Śpiewogranie 2026" },
     eventNameJuwenalia: { pl: "Juwenalia Jarosław 2026", en: "Juwenalia Jarosław 2026" },
 
