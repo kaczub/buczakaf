@@ -927,6 +927,9 @@ img { display: block; max-width: 100%; height: auto; }
   }
 
   .nav-logo {
+    position: static;
+    left: auto;
+    transform: none;
     justify-self: center;
   }
 
