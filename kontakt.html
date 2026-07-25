@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O mnie — buczakaf</title>
+  <title>Kontakt — buczakaf</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-page="about">
+<body data-page="contact">
 
   <nav class="navbar">
     <div class="nav-left">
@@ -63,51 +63,28 @@
     </div>
   </div>
 
-  <header class="gallery-header">
-    <h1 data-i18n="aboutHeader">O mnie</h1>
-  </header>
+  <main class="contact-page">
+    <div class="contact-head">
+      <p class="contact-kicker" data-i18n="contactPageKicker">Kontakt</p>
+      <h1 class="contact-page-title" data-i18n="contactPageTitle">Napisz do mnie</h1>
+    </div>
 
-  <main class="about-layout">
-    <section class="about-shell">
-      <p class="about-kicker" data-i18n="aboutKicker">Fotograf koncertowy</p>
+    <section class="contact-channels">
+      <a class="contact-card" href="https://instagram.com/buczakaf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+        <span class="contact-card-label" data-i18n="contactIG">Instagram</span>
+        <span class="contact-card-value">@buczakaf</span>
+      </a>
 
-      <div class="about-grid">
-        <article class="about-copy">
-          <p data-i18n="aboutP1">Cześć, jestem Kamil. Fotografią koncertową zajmuję się od 2024 roku. Jestem komputerowym geekiem &mdash; łączę pasję do sceny z technologią.</p>
-
-          <div class="about-events" data-i18n-html="aboutP2">
-            <p class="about-events-head">Wydarzenia, które uwieczniłem:</p>
-            <ul class="about-list">
-              <li>Dni Jarosławia (2025, 2026)</li>
-              <li><a href="https://www.instagram.com/juwenalia_pans_jaroslaw/" target="_blank" rel="noopener">III Jarosławskie Juwenalia PANS</a></li>
-              <li>Służba medialna na <a href="https://lednica.zhr.pl" target="_blank" rel="noopener">HSL Lednica</a></li>
-              <li>Służba medialna w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a></li>
-              <li>Stała współpraca z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a></li>
-            </ul>
-            <p class="about-cta">Chcesz zdjęcia ze swojego koncertu, festiwalu lub wydarzenia? <a href="kontakt.html">Napisz!</a></p>
-          </div>
-        </article>
-
-        <aside class="about-side">
-          <section class="about-card about-gear">
-            <h3 data-i18n="gearHeader">Mój sprzęt</h3>
-            <ul>
-              <li data-i18n="gearCamera">Sony A6400 + SIGMA 18-50mm F2.8</li>
-              <li data-i18n="gearHelios">Helios 58mm f/2</li>
-              <li data-i18n="gearMac">Mac Mini M4</li>
-              <li data-i18n="gearThinkPad">ThinkPad T490</li>
-            </ul>
-          </section>
-
-          <section class="about-card">
-            <h3 data-i18n="workflowHeader">Praca i edycja</h3>
-            <ul>
-              <li data-i18n="workflowLightroom">Lightroom Classic</li>
-              <li data-i18n="workflowPhotoshop">Photoshop</li>
-            </ul>
-          </section>
-        </aside>
-      </div>
+      <a class="contact-card" href="mailto:buczakaf@gmail.com">
+        <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+        <span class="contact-card-label" data-i18n="contactEmail">Email</span>
+        <span class="contact-card-value">buczakaf@gmail.com</span>
+      </a>
     </section>
   </main>
 

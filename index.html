@@ -14,6 +14,7 @@
     <div class="nav-left">
       <a class="nav-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
       <a class="nav-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+      <a class="nav-link" href="kontakt.html" data-i18n="navContact">Kontakt</a>
     </div>
     <a class="nav-logo" href="index.html">buczakaf</a>
     <div class="nav-right">
@@ -46,6 +47,7 @@
     <div class="mobile-menu-links">
       <a class="mobile-menu-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
       <a class="mobile-menu-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+      <a class="mobile-menu-link" href="kontakt.html" data-i18n="navContact">Kontakt</a>
     </div>
     <div class="mobile-menu-footer">
       <div class="lang-switch" aria-label="Language switcher" data-i18n-aria-label="langSwitcherLabel">
@@ -67,46 +69,183 @@
     <div class="hero-stage hero-stage-home">
       <div class="hero-copy hero-copy-home">
         <p class="hero-eyebrow" data-i18n="heroSubtitle">Fotograf</p>
-        <h1 data-i18n="heroTitle">Cześć, jestem Kamil</h1>
+        <h1 data-i18n="heroTitle">Fotografia koncertowa i reportażowa</h1>
       </div>
     </div>
   </section>
 
-  <!-- ─── Categories ──────────────────────────────────────────── -->
-  <main class="categories">
+  <!-- ─── Works ────────────────────────────────────────────────── -->
+  <main class="works">
 
-    <!-- Harcerstwo -->
-    <a class="cat-feature" href="harcerstwo.html">
-      <div class="cat-feature-media">
-        <img src="images/harcerstwo/DSC_0253.jpg" alt="Harcerstwo" width="4608" height="3072" fetchpriority="high"
-             style="object-position: center center;"
-             data-fallback-label="DSC_0253.jpg">
-      </div>
-      <div class="cat-feature-panel">
-        <h2 data-i18n="catScouting">Harcerstwo</h2>
-      </div>
-    </a>
+    <div class="works-head">
+      <p class="works-kicker" data-i18n="worksKicker">Portfolio</p>
+      <h2 class="works-title" data-i18n="worksTitle">Moje prace</h2>
+    </div>
 
-    <!-- Koncerty -->
-    <a class="cat-feature" href="koncerty.html">
-      <div class="cat-feature-media">
-        <img src="images/koncerty/DSC_0014-Poprawione-Szum-2.jpg" alt="Koncerty" width="4566" height="3044"
-             style="object-position: center center;"
-             data-fallback-label="DSC_0014-Poprawione-Szum-2.jpg">
-      </div>
-      <div class="cat-feature-panel">
-        <h2 data-i18n="catConcerts">Koncerty</h2>
-      </div>
-    </a>
+    <div class="works-filter" role="tablist" aria-label="Filter by event">
+      <button class="filter-btn active" type="button" role="tab" aria-selected="true" data-filter="all" data-i18n="filterAll">Wszystkie</button>
+      <button class="filter-btn" type="button" role="tab" aria-selected="false" data-filter="dni2026" data-i18n="filterDni2026">Dni Jarosławia 2026</button>
+      <button class="filter-btn" type="button" role="tab" aria-selected="false" data-filter="juwenalia" data-i18n="filterJuwenalia">Juwenalia 2026</button>
+      <button class="filter-btn" type="button" role="tab" aria-selected="false" data-filter="spiewogranie" data-i18n="filterSpiewogranie">Śpiewogranie 2026</button>
+      <button class="filter-btn" type="button" role="tab" aria-selected="false" data-filter="dni2025" data-i18n="filterDni2025">Dni Jarosławia 2025</button>
+      <button class="filter-btn" type="button" role="tab" aria-selected="false" data-filter="sesja" data-i18n="filterSesja">Sesje</button>
+    </div>
 
+    <div class="works-gallery">
+
+      <!-- Dni Jarosławia 2026 -->
+      <div class="works-event" data-event="dni2026">
+        <h4 class="works-artist">Medeis</h4>
+        <p class="works-event-name" data-i18n="eventNameDniJaroslawia2026">Dni Jarosławia 2026</p>
+        <div class="gallery-grid">
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-13.webp" alt="Medeis — Dni Jarosławia 2026 1" width="2400" height="3001" loading="eager" fetchpriority="high" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-14.webp" alt="Medeis — Dni Jarosławia 2026 2" width="2400" height="1601" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-15.webp" alt="Medeis — Dni Jarosławia 2026 3" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-16.webp" alt="Medeis — Dni Jarosławia 2026 4" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-5.webp" alt="Medeis — Dni Jarosławia 2026 5" width="2400" height="3001" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-6.webp" alt="Medeis — Dni Jarosławia 2026 6" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-7.webp" alt="Medeis — Dni Jarosławia 2026 7" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-8.webp" alt="Medeis — Dni Jarosławia 2026 8" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-9.webp" alt="Medeis — Dni Jarosławia 2026 9" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-10.webp" alt="Medeis — Dni Jarosławia 2026 10" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-11.webp" alt="Medeis — Dni Jarosławia 2026 11" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-12.webp" alt="Medeis — Dni Jarosławia 2026 12" width="2400" height="1601" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-13.webp" alt="Medeis — Dni Jarosławia 2026 13" width="2400" height="3001" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-14.webp" alt="Medeis — Dni Jarosławia 2026 14" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-15.webp" alt="Medeis — Dni Jarosławia 2026 15" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-16.webp" alt="Medeis — Dni Jarosławia 2026 16" width="2400" height="1601" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-17.webp" alt="Medeis — Dni Jarosławia 2026 17" width="2400" height="3001" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-18.webp" alt="Medeis — Dni Jarosławia 2026 18" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-19.webp" alt="Medeis — Dni Jarosławia 2026 19" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-20.webp" alt="Medeis — Dni Jarosławia 2026 20" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-21.webp" alt="Medeis — Dni Jarosławia 2026 21" width="2400" height="3000" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-22.webp" alt="Medeis — Dni Jarosławia 2026 22" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-23.webp" alt="Medeis — Dni Jarosławia 2026 23" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-24.webp" alt="Medeis — Dni Jarosławia 2026 24" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-25.webp" alt="Medeis — Dni Jarosławia 2026 25" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-26.webp" alt="Medeis — Dni Jarosławia 2026 26" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-27.webp" alt="Medeis — Dni Jarosławia 2026 27" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 26-28.06.2026/Medeis/Medeis-28.webp" alt="Medeis — Dni Jarosławia 2026 28" width="2400" height="1600" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- Juwenalia 2026 -->
+      <div class="works-event" data-event="juwenalia">
+        <h4 class="works-artist">VIDEO</h4>
+        <p class="works-event-name" data-i18n="eventNameJuwenalia">Juwenalia Jarosław 2026</p>
+        <div class="gallery-grid">
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-01.webp" alt="Juwenalia 2026 1" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-19.webp" alt="Juwenalia 2026 2" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-21.webp" alt="Juwenalia 2026 3" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-23.webp" alt="Juwenalia 2026 4" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-25.webp" alt="Juwenalia 2026 5" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-26.webp" alt="Juwenalia 2026 6" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-27.webp" alt="Juwenalia 2026 7" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-28.webp" alt="Juwenalia 2026 8" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-29.webp" alt="Juwenalia 2026 9" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-03.webp" alt="Juwenalia 2026 10" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-05.webp" alt="Juwenalia 2026 11" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-07.webp" alt="Juwenalia 2026 12" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-09.webp" alt="Juwenalia 2026 13" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-11.webp" alt="Juwenalia 2026 14" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-13.webp" alt="Juwenalia 2026 15" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-15.webp" alt="Juwenalia 2026 16" width="2400" height="3001" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-17.webp" alt="Juwenalia 2026 17" width="2400" height="3001" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-02.webp" alt="Juwenalia 2026 18" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-04.webp" alt="Juwenalia 2026 19" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-06.webp" alt="Juwenalia 2026 20" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-08.webp" alt="Juwenalia 2026 21" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-10.webp" alt="Juwenalia 2026 22" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-12.webp" alt="Juwenalia 2026 23" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-14.webp" alt="Juwenalia 2026 24" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-16.webp" alt="Juwenalia 2026 25" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-18.webp" alt="Juwenalia 2026 26" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-20.webp" alt="Juwenalia 2026 27" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-22.webp" alt="Juwenalia 2026 28" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/III Jarosławskie Juwenalia PANS - 26.06.2026/VIDEO/Img-24.webp" alt="Juwenalia 2026 29" width="2400" height="1600" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- Śpiewogranie 2026 -->
+      <div class="works-event" data-event="spiewogranie">
+        <h4 class="works-artist">Michał Zieleń</h4>
+        <p class="works-event-name" data-i18n="eventNameSpiewogranie">Śpiewogranie 2026</p>
+        <div class="gallery-grid">
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-01.webp" alt="Michał Zieleń — Śpiewogranie 2026 1" width="1600" height="2400" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-12.webp" alt="Michał Zieleń — Śpiewogranie 2026 2" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-13.webp" alt="Michał Zieleń — Śpiewogranie 2026 3" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-14.webp" alt="Michał Zieleń — Śpiewogranie 2026 4" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-15.webp" alt="Michał Zieleń — Śpiewogranie 2026 5" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-16.webp" alt="Michał Zieleń — Śpiewogranie 2026 6" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-17.webp" alt="Michał Zieleń — Śpiewogranie 2026 7" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-18.webp" alt="Michał Zieleń — Śpiewogranie 2026 8" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-09.webp" alt="Michał Zieleń — Śpiewogranie 2026 9" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-03.webp" alt="Michał Zieleń — Śpiewogranie 2026 10" width="1600" height="2400" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-05.webp" alt="Michał Zieleń — Śpiewogranie 2026 11" width="1600" height="2400" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-02.webp" alt="Michał Zieleń — Śpiewogranie 2026 12" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-04.webp" alt="Michał Zieleń — Śpiewogranie 2026 13" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-07.webp" alt="Michał Zieleń — Śpiewogranie 2026 14" width="1600" height="2400" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-06.webp" alt="Michał Zieleń — Śpiewogranie 2026 15" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-08.webp" alt="Michał Zieleń — Śpiewogranie 2026 16" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-10.webp" alt="Michał Zieleń — Śpiewogranie 2026 17" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Śpiewogranie - 13.06.2026/Michał Zieleń/Img-11.webp" alt="Michał Zieleń — Śpiewogranie 2026 18" width="2400" height="1600" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- Dni Jarosławia 2025 -->
+      <div class="works-event" data-event="dni2025">
+        <h4 class="works-artist">Medeis</h4>
+        <p class="works-event-name" data-i18n="eventNameDniJaroslawia2025">Dni Jarosławia 2025</p>
+        <div class="gallery-grid">
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-10.webp" alt="Medeis — Dni Jarosławia 2025 1" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-06.webp" alt="Medeis — Dni Jarosławia 2025 2" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-11.webp" alt="Medeis — Dni Jarosławia 2025 3" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-03.webp" alt="Medeis — Dni Jarosławia 2025 4" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-01.webp" alt="Medeis — Dni Jarosławia 2025 5" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-02.webp" alt="Medeis — Dni Jarosławia 2025 6" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-16.webp" alt="Medeis — Dni Jarosławia 2025 7" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-14.webp" alt="Medeis — Dni Jarosławia 2025 8" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-12.webp" alt="Medeis — Dni Jarosławia 2025 9" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-15.webp" alt="Medeis — Dni Jarosławia 2025 10" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-13.webp" alt="Medeis — Dni Jarosławia 2025 11" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-09.webp" alt="Medeis — Dni Jarosławia 2025 12" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-08.webp" alt="Medeis — Dni Jarosławia 2025 13" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-05.webp" alt="Medeis — Dni Jarosławia 2025 14" width="2400" height="3601" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-07.webp" alt="Medeis — Dni Jarosławia 2025 15" width="2400" height="3600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Dni Jarosławia - 28-29.06.2025 /Medeis/Img-04.webp" alt="Medeis — Dni Jarosławia 2025 16" width="2400" height="2400" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- Sesja 2025 -->
+      <div class="works-event" data-event="sesja">
+        <h4 class="works-artist">Medeis</h4>
+        <p class="works-event-name" data-i18n="eventNameSesja">Sesje — Medeis 2025</p>
+        <div class="gallery-grid">
+          <div class="photo"><img src="images/koncerty/Sesje/Img-02.webp" alt="Medeis — Sesja 2025 1" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Sesje/Img-03.webp" alt="Medeis — Sesja 2025 2" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Sesje/Img-04.webp" alt="Medeis — Sesja 2025 3" width="2400" height="1600" loading="lazy" decoding="async"></div>
+          <div class="photo"><img src="images/koncerty/Sesje/Img-01.webp" alt="Medeis — Sesja 2025 4" width="2400" height="3600" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <footer class="site-footer" data-i18n="footerMade">Made with love in Jarosław</footer>
+  <footer class="site-footer">
+    <span data-i18n-html="footerCopyright">&copy; 2026 buczakaf. All rights reserved.</span>
+  </footer>
 
   <!-- ─── Back to top ─────────────────────────────────────────── -->
   <button class="back-top" aria-label="Wróć na górę" data-i18n-aria-label="backToTopLabel">
     <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
+
+  <div class="lightbox" role="dialog" aria-modal="true">
+    <img src="" alt="Powiększone zdjęcie" data-i18n-alt="lightboxImageAlt">
+    <button class="lb-close" aria-label="Zamknij" data-i18n-aria-label="lightboxCloseLabel">&#215;</button>
+    <button class="lb-prev" aria-label="Poprzednie" data-i18n-aria-label="lightboxPrevLabel">&#8249;</button>
+    <button class="lb-next" aria-label="Następne" data-i18n-aria-label="lightboxNextLabel">&#8250;</button>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

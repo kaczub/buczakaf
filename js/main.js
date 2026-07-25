@@ -1,3 +1,45 @@
+
+
+/* ─── Split into two columns, balancing height ────────────── */
+(function splitGrid() {
+  document.querySelectorAll('.gallery-grid').forEach((grid) => {
+    const items = [...grid.children].filter((el) => el.matches('.photo'));
+    if (items.length < 2) return;
+
+    const tall = [];
+    const wide = [];
+
+    items.forEach((el) => {
+      const img = el.querySelector('img');
+      const w = Number(img?.getAttribute('width')) || 1;
+      const h = Number(img?.getAttribute('height')) || 1;
+      el.dataset.ratio = h / w;
+      (h > w * 1.1 ? tall : wide).push(el);
+    });
+
+    const mixed = [];
+    let ti = 0, wi = 0;
+    while (ti < tall.length || wi < wide.length) {
+      if (ti < tall.length) mixed.push(tall[ti++]);
+      if (wi < wide.length) mixed.push(wide[wi++]);
+    }
+
+    const colA = document.createElement('div');
+    colA.className = 'gallery-col';
+    const colB = document.createElement('div');
+    colB.className = 'gallery-col';
+    let hA = 0, hB = 0;
+
+    mixed.forEach((el) => {
+      const ratio = Number(el.dataset.ratio) || 1;
+      if (hA <= hB) { colA.appendChild(el); hA += ratio; }
+      else { colB.appendChild(el); hB += ratio; }
+    });
+
+    grid.replaceChildren(colA, colB);
+  });
+})();
+
 /* ─── Back to top ──────────────────────────────────────────── */
 const backTop = document.querySelector('.back-top');
 if (backTop) {
@@ -17,7 +59,7 @@ const translations = {
     navPortfolio: { pl: "Portfolio", en: "Portfolio" },
     navAbout: { pl: "O mnie", en: "About" },
     photographerLabel: { pl: "Fotograf", en: "Photographer" },
-    footerMade: { pl: "Made with love in Jarosław", en: "Made with love in Jarosław" },
+    footerCopyright: { pl: "&copy; 2026 buczakaf. Wszelkie prawa zastrzeżone.", en: "&copy; 2026 buczakaf. All rights reserved." },
     langSwitcherLabel: { pl: "Przełącznik języka", en: "Language switcher" },
     menuOpenLabel: { pl: "Otwórz menu", en: "Open menu" },
     menuCloseLabel: { pl: "Zamknij menu", en: "Close menu" },
@@ -26,16 +68,39 @@ const translations = {
     lightboxCloseLabel: { pl: "Zamknij", en: "Close" },
     lightboxPrevLabel: { pl: "Poprzednie", en: "Previous" },
     lightboxNextLabel: { pl: "Następne", en: "Next" },
+    navContact: { pl: "Kontakt", en: "Contact" },
   },
   home: {
     metaTitle: {
       pl: "buczakaf — Fotograf",
       en: "buczakaf — Photographer",
     },
-    heroTitle: { pl: "Cześć, jestem Kamil", en: "Hi, I'm Kamil" },
+    heroTitle: { pl: "Fotografia koncertowa i reportażowa", en: "Concert & documentary photography" },
     heroSubtitle: { pl: "Fotograf", en: "Photographer" },
-    catScouting: { pl: "Harcerstwo", en: "Scouting" },
-    catConcerts: { pl: "Koncerty", en: "Concerts" },
+    worksKicker: { pl: "Portfolio", en: "Portfolio" },
+    worksTitle: { pl: "Moje prace", en: "My work" },
+    filterAll: { pl: "Wszystkie", en: "All" },
+    filterDni2026: { pl: "Dni Jarosławia 2026", en: "Dni Jarosławia 2026" },
+    filterJuwenalia: { pl: "Juwenalia Jarosław 2026", en: "Juwenalia Jarosław 2026" },
+    filterSpiewogranie: { pl: "Śpiewogranie 2026", en: "Śpiewogranie 2026" },
+    filterDni2025: { pl: "Dni Jarosławia 2025", en: "Dni Jarosławia 2025" },
+    filterSesja: { pl: "Sesje", en: "Sessions" },
+    eventNameDniJaroslawia2026: { pl: "Dni Jarosławia 2026", en: "Dni Jarosławia 2026" },
+    eventNameDniJaroslawia2025: { pl: "Dni Jarosławia 2025", en: "Dni Jarosławia 2025" },
+    eventNameSesja: { pl: "Sesje — Medeis 2025", en: "Sessions — Medeis 2025" },
+    eventNameSpiewogranie: { pl: "Śpiewogranie 2026", en: "Śpiewogranie 2026" },
+    eventNameJuwenalia: { pl: "Juwenalia Jarosław 2026", en: "Juwenalia Jarosław 2026" },
+
+  },
+  contact: {
+    metaTitle: {
+      pl: "Kontakt — buczakaf",
+      en: "Contact — buczakaf",
+    },
+    contactPageKicker: { pl: "Kontakt", en: "Contact" },
+    contactPageTitle: { pl: "Napisz do mnie", en: "Contact me" },
+    contactIG: { pl: "Instagram", en: "Instagram" },
+    contactEmail: { pl: "Email", en: "Email" },
   },
   about: {
     metaTitle: {
@@ -44,21 +109,25 @@ const translations = {
     },
     aboutHeader: { pl: "O mnie", en: "About" },
     aboutKicker: {
-      pl: "Fotografia koncertowa, harcerska i reportażowa",
-      en: "Concert, scouting, and documentary photography",
+      pl: "Fotograf koncertowy",
+      en: "Concert photographer",
     },
     aboutP1: {
-      pl: "Interesuję się fotografią, informatyką i muzyką. Zdjęcia robię od kwietnia 2024 roku. W wolnym czasie gram na gitarze i uczę się programowania. Ta strona jest na razie zrobiona głównie przez AI, ale mam zamiar stopniowo pisać coraz więcej własnego kodu.",
-      en: "I'm interested in photography, computer science, and music. I've been taking photos since April 2024. In my free time I play guitar and learn programming. This website is currently built mostly with AI, but I plan to gradually write more and more of the code myself.",
+      pl: "Cześć, mam na imię Kamil. Jestem pasjonatem fotografii, informatyki i muzyki oraz komputerowym geekiem. Zdjęcia robię od kwietnia 2024 roku, a moją największą pasją są koncerty i wydarzenia na żywo. To właśnie pod sceną najlepiej czuję energię kadru i potrafię złapać prawdziwe emocje chwili.",
+      en: "Hi, I'm Kamil. I'm passionate about photography, computer science, music, and I'm a total computer geek. I've been taking photos since April 2024, and my greatest passion is concerts and live events. It's under the stage where I feel the energy of the frame and capture the real emotions of the moment.",
     },
     aboutP2: {
-      pl: 'Fotografuję różne tematy, ale najmocniej ciągnie mnie do koncertów, bo właśnie tam najlepiej czuję energię kadru i emocje chwili. Mam już za sobą współpracę z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, działam też jako zastępowy i fotograf w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a>.',
-      en: 'I photograph different subjects, but I feel most drawn to concerts, because that is where I connect most with the energy of the frame and the emotion of the moment. I have already worked with the band <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a>, and I also serve as a patrol leader and photographer in the <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1st Jaroslaw Scout Troop “Pościg”</a>.',
+      pl: '<p class="about-events-head">Wydarzenia, które uwieczniłem:</p><ul class="about-list"><li>Dni Jarosławia (2025, 2026)</li><li><a href="https://www.instagram.com/juwenalia_pans_jaroslaw/" target="_blank" rel="noopener">III Jarosławskie Juwenalia PANS</a></li><li>Służba medialna na <a href="https://lednica.zhr.pl" target="_blank" rel="noopener">HSL Lednica</a></li><li>Służba medialna w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a></li><li>Stała współpraca z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a></li></ul><p class="about-cta">Chcesz zdjęcia ze swojego koncertu, festiwalu lub wydarzenia? <a href="kontakt.html">Napisz!</a></p>',
+      en: "<p class=\"about-events-head\">Events I've captured:</p><ul class=\"about-list\"><li>Dni Jarosławia (2025, 2026)</li><li><a href=\"https://www.instagram.com/juwenalia_pans_jaroslaw/\" target=\"_blank\" rel=\"noopener\">III Jarosławskie Juwenalia PANS</a></li><li>Media service at <a href=\"https://lednica.zhr.pl\" target=\"_blank\" rel=\"noopener\">HSL Lednica</a></li><li>Media service at <a href=\"https://www.instagram.com/1jdh_poscig/\" target=\"_blank\" rel=\"noopener\">1st Jarosław Scout Troop \"Pościg\"</a></li><li>Ongoing collaboration with <a href=\"https://www.instagram.com/medeis_officiall/\" target=\"_blank\" rel=\"noopener\">Medeis</a></li></ul><p class=\"about-cta\">Want photos from your concert, festival, or event? <a href=\"kontakt.html\">Contact me!</a></p>",
     },
     gearHeader: { pl: "Mój sprzęt", en: "My gear" },
     gearCamera: {
       pl: "Sony A6400 + SIGMA 18-50mm F2.8",
       en: "Sony A6400 + SIGMA 18-50mm F2.8",
+    },
+    gearHelios: {
+      pl: "Helios 58mm f/2",
+      en: "Helios 58mm f/2",
     },
     gearMac: { pl: "Mac Mini M4", en: "Mac Mini M4" },
     gearThinkPad: {
@@ -68,20 +137,6 @@ const translations = {
     workflowHeader: { pl: "Praca i edycja", en: "Work and editing" },
     workflowLightroom: { pl: "Lightroom Classic", en: "Lightroom Classic" },
     workflowPhotoshop: { pl: "Photoshop", en: "Photoshop" },
-  },
-  scouting: {
-    metaTitle: {
-      pl: "Harcerstwo — buczakaf",
-      en: "Scouting — buczakaf",
-    },
-    galleryScouting: { pl: "Harcerstwo", en: "Scouting" },
-  },
-  concerts: {
-    metaTitle: {
-      pl: "Koncerty — buczakaf",
-      en: "Concerts — buczakaf",
-    },
-    galleryConcerts: { pl: "Koncerty", en: "Concerts" },
   },
 };
 
@@ -130,9 +185,7 @@ function applyLanguage(lang) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  if (typeof updateNavToggleLabel === "function") {
-    updateNavToggleLabel();
-  }
+  updateNavToggleLabel();
 }
 
 document.querySelectorAll(".lang-btn").forEach((button) => {
@@ -205,28 +258,6 @@ if (navToggle && mobileMenu) {
 }
 
 applyLanguage(preferredLang);
-
-document.querySelectorAll("[data-fallback-label]").forEach((img) => {
-  img.addEventListener("error", () => {
-    const label = img.dataset.fallbackLabel;
-    if (label && img.parentElement) {
-      img.parentElement.innerHTML = `<div class="placeholder">${label}</div>`;
-    }
-  }, { once: true });
-});
-
-function normalizeGalleryAlts() {
-  const labelByPage = {
-    concerts: "Koncerty",
-    scouting: "Harcerstwo",
-  };
-  const baseLabel = labelByPage[pageKey];
-  if (!baseLabel) return;
-
-  [...document.querySelectorAll(".gallery-grid .photo img")].forEach((img, index) => {
-    img.alt = `${baseLabel} ${index + 1}`;
-  });
-}
 
 function clampChannel(value) {
   return Math.max(0, Math.min(255, Math.round(value)));
@@ -325,94 +356,42 @@ function whenImageReady(img, callback) {
 }
 
 function setupDynamicGlow() {
-  const cards = [...document.querySelectorAll(".cat-feature")];
-  const galleryImages = [...document.querySelectorAll(".gallery-grid .photo img")];
+  const images = [...document.querySelectorAll(".gallery-grid .photo img")];
+  if (!images.length) return;
 
-  if (cards.length) {
-    let defaultColor = null;
+  const palette = [null, null, null];
 
-    cards.forEach((card, index) => {
-      const img = card.querySelector("img");
-      if (!img) return;
+  const restore = () => {
+    const [p, s, t] = palette;
+    if (p) applyPageGlow(p, s || p, t || p);
+  };
 
-      whenImageReady(img, () => {
-        const color = readImageColor(img);
-        if (!color) return;
+  images.forEach((img, i) => {
+    whenImageReady(img, () => {
+      const color = readImageColor(img);
+      if (!color) return;
 
-        card.dataset.glow = JSON.stringify(color);
-        card.style.setProperty("--tile-glow", rgbaString(color, 0.24));
+      const frame = img.closest(".photo");
+      applyPhotoAccent(frame, color);
 
-        if (!defaultColor || index === 0) {
-          defaultColor = color;
-          applyPageGlow(color);
-        }
-      });
+      if (i < 3) { palette[i] = color; restore(); }
 
-      const activateCardGlow = () => {
-        if (!card.dataset.glow) return;
-        const color = JSON.parse(card.dataset.glow);
-        const accent = mixColor(color, { r: 255, g: 255, b: 255 }, 0.04);
-        applyPageGlow(color, accent, mixColor(color, { r: 255, g: 90, b: 120 }, 0.1));
-      };
+      if (!frame) return;
 
-      card.addEventListener("pointerenter", activateCardGlow);
-      card.addEventListener("focusin", activateCardGlow);
-      card.addEventListener("pointerleave", () => {
-        if (defaultColor) applyPageGlow(defaultColor);
-      });
-      card.addEventListener("focusout", () => {
-        if (defaultColor) applyPageGlow(defaultColor);
-      });
-    });
-  }
-
-  if (!cards.length && galleryImages.length) {
-    const defaultPalette = new Array(3).fill(null);
-
-    const restoreDefaultGlow = () => {
-      const [primary, secondary, tertiary] = defaultPalette;
-      if (!primary) return;
-
-      applyPageGlow(
-        primary,
-        secondary || primary,
-        tertiary || primary,
+      const activate = () => applyPageGlow(
+        color,
+        mixColor(color, { r: 90, g: 140, b: 255 }, 0.18),
+        mixColor(color, { r: 255, g: 120, b: 90 }, 0.14),
       );
-    };
 
-    galleryImages.forEach((img, index) => {
-      whenImageReady(img, () => {
-        const color = readImageColor(img);
-        if (!color) return;
-
-        const frame = img.closest(".photo");
-        applyPhotoAccent(frame, color);
-
-        if (index < 3) {
-          defaultPalette[index] = color;
-          restoreDefaultGlow();
-        }
-
-        if (!frame) return;
-
-        const activateGlow = () => {
-          applyPageGlow(
-            color,
-            mixColor(color, { r: 90, g: 140, b: 255 }, 0.18),
-            mixColor(color, { r: 255, g: 120, b: 90 }, 0.14),
-          );
-        };
-
-        frame.addEventListener("pointerenter", activateGlow);
-        frame.addEventListener("focusin", activateGlow);
-        frame.addEventListener("pointerleave", restoreDefaultGlow);
-        frame.addEventListener("focusout", restoreDefaultGlow);
-      });
+      frame.addEventListener("pointerenter", activate);
+      frame.addEventListener("focusin", activate);
+      frame.addEventListener("pointerleave", restore);
+      frame.addEventListener("focusout", restore);
     });
-  }
+  });
 }
 
-normalizeGalleryAlts();
 setupDynamicGlow();
 
 /* ─── Lightbox (gallery pages) ────────────────────────────── */
@@ -421,77 +400,21 @@ const lbImg     = lightbox?.querySelector('img');
 const lbClose   = lightbox?.querySelector('.lb-close');
 const lbPrev    = lightbox?.querySelector('.lb-prev');
 const lbNext    = lightbox?.querySelector('.lb-next');
-const galleryGrid = document.querySelector('.gallery-grid');
-
 let photos = [];
 let current = 0;
 
-if (lightbox) {
+function rebuildPhotos() {
   photos = [...document.querySelectorAll('.gallery-grid .photo img')];
+}
 
-  photos.forEach((img) => {
-    const width = Number(img.getAttribute('width'));
-    const height = Number(img.getAttribute('height'));
+if (lightbox) {
+  rebuildPhotos();
 
-    if (width > 0 && height > 0) {
-      img.parentElement.style.aspectRatio = `${width} / ${height}`;
-    }
-  });
-
-  function getGalleryColumnCount() {
-    if (window.matchMedia('(max-width: 640px)').matches) return 1;
-    return 2;
-  }
-
-  function layoutGalleryColumns() {
-    if (!galleryGrid) return;
-
-    galleryGrid.style.setProperty('--gallery-columns', String(currentGalleryColumnCount));
-
-    const items = [...galleryGrid.querySelectorAll('.photo')];
-    if (!items.length) return;
-
-    const columnCount = getGalleryColumnCount();
-    const columns = Array.from({ length: columnCount }, () => {
-      const column = document.createElement('div');
-      column.className = 'gallery-column';
-      return column;
-    });
-    const columnHeights = new Array(columnCount).fill(0);
-
-    items.forEach((item) => {
-      const img = item.querySelector('img');
-      const width = Number(img?.getAttribute('width')) || 1;
-      const height = Number(img?.getAttribute('height')) || 1;
-      const estimatedHeight = height / width;
-
-      let targetColumnIndex = 0;
-      for (let i = 1; i < columnCount; i += 1) {
-        if (columnHeights[i] < columnHeights[targetColumnIndex]) {
-          targetColumnIndex = i;
-        }
-      }
-
-      columns[targetColumnIndex].appendChild(item);
-      columnHeights[targetColumnIndex] += estimatedHeight;
-    });
-
-    galleryGrid.replaceChildren(...columns);
-  }
-
-  let currentGalleryColumnCount = getGalleryColumnCount();
-  layoutGalleryColumns();
-
-  window.addEventListener('resize', () => {
-    const nextGalleryColumnCount = getGalleryColumnCount();
-    if (nextGalleryColumnCount === currentGalleryColumnCount) return;
-
-    currentGalleryColumnCount = nextGalleryColumnCount;
-    layoutGalleryColumns();
-  });
-
-  photos.forEach((img, i) => {
-    img.parentElement.addEventListener('click', () => openLightbox(i));
+  document.addEventListener('click', (e) => {
+    const img = e.target.closest('.gallery-grid .photo img');
+    if (!img) return;
+    const idx = photos.indexOf(img);
+    if (idx !== -1) openLightbox(idx);
   });
 
   function openLightbox(i) {
@@ -529,6 +452,16 @@ if (lightbox) {
     if (e.key === 'ArrowLeft')   stepLightbox(-1);
     if (e.key === 'ArrowRight')  stepLightbox(1);
   });
+
+  let touchStartX = 0;
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  lightbox.addEventListener('touchend', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    const diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) stepLightbox(diff > 0 ? 1 : -1);
+  }, { passive: true });
 }
 
 /* ─── Staggered photo reveal on gallery pages ─────────────── */
@@ -545,10 +478,42 @@ if (revealItems.length) {
   }, { threshold: 0.02, rootMargin: '0px 0px -8% 0px' });
 
   revealItems.forEach((el, i) => {
-    const delay = Math.min(i * 0.014, 0.14);
+    const delay = Math.min(i * 0.006, 0.07);
     el.style.opacity = '0';
-    el.style.transform = 'translate3d(0, 10px, 0)';
-    el.style.transition = `opacity 0.28s ease ${delay}s, transform 0.34s ease ${delay}s`;
+    el.style.transform = 'translate3d(0, 8px, 0)';
+    el.style.transition = `opacity 0.15s ease ${delay}s, transform 0.18s ease ${delay}s`;
     observer.observe(el);
   });
 }
+
+/* ─── Event filter (homepage) ──────────────────────────────── */
+;(function initEventFilter() {
+  const events = [...document.querySelectorAll(".works-event")];
+
+  document.querySelectorAll(".filter-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter-btn").forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-selected", "false");
+      });
+      btn.classList.add("active");
+      btn.setAttribute("aria-selected", "true");
+
+      const filter = btn.dataset.filter;
+      events.forEach((el) => {
+        const show = filter === "all" || el.dataset.event === filter;
+        el.classList.toggle("hidden", !show);
+        if (show) {
+          el.style.opacity = "0";
+          el.style.transform = "translate3d(0, 12px, 0)";
+          requestAnimationFrame(() => {
+            el.style.transition = "opacity 0.2s ease, transform 0.25s ease";
+            el.style.opacity = "1";
+            el.style.transform = "none";
+          });
+        }
+      });
+      if (typeof rebuildPhotos === "function") rebuildPhotos();
+    });
+  });
+})();
