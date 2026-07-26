@@ -515,6 +515,60 @@ if (revealItems.length) {
         }
       });
       if (typeof rebuildPhotos === "function") rebuildPhotos();
+      updateArtistNav(filter, events);
     });
   });
+
+  updateArtistNav("all", events);
+
+  function updateArtistNav(filter, allEvents) {
+    const nav = document.getElementById("artistNav");
+    if (!nav) return;
+
+    if (filter === "all") {
+      nav.classList.remove("has-artists");
+      nav.innerHTML = "";
+      return;
+    }
+
+    const visible = allEvents.filter((el) => el.dataset.event === filter);
+
+    const groups = {};
+    visible.forEach((el) => {
+      const ev = el.dataset.event;
+      if (!groups[ev]) groups[ev] = [];
+      groups[ev].push(el);
+    });
+
+    const multi = Object.values(groups).filter((g) => g.length > 1);
+    if (multi.length === 0) {
+      nav.classList.remove("has-artists");
+      nav.innerHTML = "";
+      return;
+    }
+
+    const links = multi.flatMap((group) =>
+      group.map((el) => {
+        const name = el.querySelector(".works-artist")?.textContent || "";
+        return `<a href="#" data-target="${name.replace(/\s+/g, "-")}">${name}</a>`;
+      })
+    );
+
+    nav.innerHTML = links.join("");
+    nav.classList.add("has-artists");
+
+    nav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        const name = a.textContent;
+        const target = [...allEvents].find(
+          (el) => !el.classList.contains("hidden") &&
+            el.querySelector(".works-artist")?.textContent === name
+        );
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  }
 })();
