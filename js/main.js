@@ -52,7 +52,7 @@ const translations = {
     navPortfolio: { pl: "Portfolio", en: "Portfolio" },
     navAbout: { pl: "O mnie", en: "About" },
     photographerLabel: { pl: "Fotograf", en: "Photographer" },
-    footerCopyright: { pl: "&copy; 2026 buczakaf. Wszelkie prawa zastrzeżone.", en: "&copy; 2026 buczakaf. All rights reserved." },
+    footerCopyright: { pl: "&copy; 2026 buczakaf.", en: "&copy; 2026 buczakaf." },
     langSwitcherLabel: { pl: "Przełącznik języka", en: "Language switcher" },
     menuOpenLabel: { pl: "Otwórz menu", en: "Open menu" },
     menuCloseLabel: { pl: "Zamknij menu", en: "Close menu" },
