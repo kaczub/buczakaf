@@ -1,6 +1,10 @@
 .DS_Store
 **/.DS_Store
 
-# Design-process artifacts (impeccable skill) and scratch previews
+# Design-process artifacts (impeccable skill), agent tooling and scratch previews.
+# Kept locally for the design workflow, but not published to GitHub.
 .impeccable/
+.opencode/
 _preview-*.html
+DESIGN.md
+PRODUCT.md
