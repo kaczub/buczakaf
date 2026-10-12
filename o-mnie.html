@@ -4,15 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O mnie — buczakaf</title>
+  <meta name="description" content="O mnie — buczakaf. Fotograf koncertowy z Jarosławia: koncerty, festiwale, wydarzenia i sesje od kwietnia 2024 roku.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="buczakaf">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="O mnie — buczakaf">
+  <meta property="og:description" content="Fotograf koncertowy z Jarosławia. Koncerty, festiwale i sesje od kwietnia 2024 roku.">
+  <meta property="og:image" content="https://kaczub.github.io/buczakaf/images/og-image.jpg">
+  <meta property="og:url" content="https://kaczub.github.io/buczakaf/o-mnie.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="O mnie — buczakaf">
+  <meta name="twitter:description" content="Fotograf koncertowy z Jarosławia.">
+  <meta name="twitter:image" content="https://kaczub.github.io/buczakaf/images/og-image.jpg">
+  <link rel="canonical" href="https://kaczub.github.io/buczakaf/o-mnie.html">
   <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- The page headline is set in Anton; requesting the two subsets it needs
+       with the markup keeps the first screen from reflowing on font swap. -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3K9-C8CSKlvPfE.woff2">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="about">
 
-  <nav class="navbar">
+  <a class="skip-link" href="#main" data-i18n="skipToContent">Przejdź do treści</a>
+
+  <nav class="navbar" aria-label="Główna nawigacja" data-i18n-aria-label="mainNavLabel">
     <div class="nav-left">
       <a class="nav-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
-      <a class="nav-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+      <a class="nav-link" href="o-mnie.html" aria-current="page" data-i18n="navAbout">O mnie</a>
       <a class="nav-link" href="kontakt.html" data-i18n="navContact">Kontakt</a>
     </div>
     <a class="nav-logo" href="index.html">buczakaf</a>
@@ -22,10 +45,17 @@
         <button class="lang-btn" type="button" data-lang="en">EN</button>
       </div>
       <a class="nav-icon" href="https://instagram.com/buczakaf" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a class="nav-icon" href="https://www.facebook.com/buczakaf/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M14.9 7.6h-1.4a1.9 1.9 0 0 0-1.9 1.9V21"/>
+          <path d="M9.9 13.1h4.6"/>
         </svg>
       </a>
       <button
@@ -45,7 +75,7 @@
   <div class="mobile-menu" id="mobile-menu">
     <div class="mobile-menu-links">
       <a class="mobile-menu-link" href="index.html" data-i18n="navPortfolio">Portfolio</a>
-      <a class="mobile-menu-link" href="o-mnie.html" data-i18n="navAbout">O mnie</a>
+      <a class="mobile-menu-link" href="o-mnie.html" aria-current="page" data-i18n="navAbout">O mnie</a>
       <a class="mobile-menu-link" href="kontakt.html" data-i18n="navContact">Kontakt</a>
     </div>
     <div class="mobile-menu-footer">
@@ -54,10 +84,17 @@
         <button class="lang-btn" type="button" data-lang="en">EN</button>
       </div>
       <a class="nav-icon mobile-nav-icon" href="https://instagram.com/buczakaf" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a class="nav-icon mobile-nav-icon" href="https://www.facebook.com/buczakaf/" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M14.9 7.6h-1.4a1.9 1.9 0 0 0-1.9 1.9V21"/>
+          <path d="M9.9 13.1h4.6"/>
         </svg>
       </a>
     </div>
@@ -67,21 +104,22 @@
     <h1 data-i18n="aboutHeader">O mnie</h1>
   </header>
 
-  <main class="about-layout">
+  <main class="about-layout" id="main">
     <section class="about-shell">
       <p class="about-kicker" data-i18n="aboutKicker">Fotograf koncertowy</p>
 
       <div class="about-grid">
         <article class="about-copy">
-          <p data-i18n="aboutP1">Cześć, jestem Kamil. Fotografią koncertową zajmuję się od 2024 roku. Jestem komputerowym geekiem &mdash; łączę pasję do sceny z technologią.</p>
+          <p data-i18n="aboutP1">Cześć, mam na imię Kamil. Jestem pasjonatem fotografii, informatyki i muzyki oraz komputerowym geekiem. Zdjęcia robię od kwietnia 2024 roku, a moją największą pasją są koncerty i wydarzenia na żywo. To właśnie pod sceną najlepiej czuję energię kadru i potrafię złapać prawdziwe emocje chwili.</p>
 
           <div class="about-events" data-i18n-html="aboutP2">
             <p class="about-events-head">Wydarzenia, które uwieczniłem:</p>
             <ul class="about-list">
               <li>Dni Jarosławia (2025, 2026)</li>
               <li><a href="https://www.instagram.com/juwenalia_pans_jaroslaw/" target="_blank" rel="noopener">III Jarosławskie Juwenalia PANS</a></li>
+              <li><a href="https://www.facebook.com/profile.php?id=61580775088060" target="_blank" rel="noopener">Rock' n' Ryk 2026</a></li>
+              <li><a href="https://www.facebook.com/mlodziezowy.podkarpacie/" target="_blank" rel="noopener">I Podkarpacki Festiwal Twórczości Młodzieżowej</a></li>
               <li>Służba medialna na <a href="https://lednica.zhr.pl" target="_blank" rel="noopener">HSL Lednica</a></li>
-              <li>Służba medialna w <a href="https://www.instagram.com/1jdh_poscig/" target="_blank" rel="noopener">1. Jarosławskiej Drużynie Harcerzy „Pościg”</a></li>
               <li>Stała współpraca z zespołem <a href="https://www.instagram.com/medeis_officiall/" target="_blank" rel="noopener">Medeis</a></li>
             </ul>
             <p class="about-cta">Chcesz zdjęcia ze swojego koncertu, festiwalu lub wydarzenia? <a href="kontakt.html">Napisz!</a></p>
@@ -90,7 +128,7 @@
 
         <aside class="about-side">
           <section class="about-card about-gear">
-            <h3 data-i18n="gearHeader">Mój sprzęt</h3>
+            <h2 data-i18n="gearHeader">Mój sprzęt</h2>
             <ul>
               <li data-i18n="gearCamera">Sony A6400 + SIGMA 18-50mm F2.8</li>
               <li data-i18n="gearHelios">Helios 58mm f/2</li>
@@ -100,7 +138,7 @@
           </section>
 
           <section class="about-card">
-            <h3 data-i18n="workflowHeader">Praca i edycja</h3>
+            <h2 data-i18n="workflowHeader">Praca i edycja</h2>
             <ul>
               <li data-i18n="workflowLightroom">Lightroom Classic</li>
               <li data-i18n="workflowPhotoshop">Photoshop</li>
@@ -116,7 +154,7 @@
   </footer>
 
   <button class="back-top" aria-label="Wróć na górę" data-i18n-aria-label="backToTopLabel">
-    <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
   <script src="js/main.js"></script>
